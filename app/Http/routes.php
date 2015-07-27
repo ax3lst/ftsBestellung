@@ -19,7 +19,7 @@ Route::get('/openorders', [
 
 Route::get('/order/delete/{code}', function($code) {
     \App\Openorder::where('code', $code)->first()->delete();
-    return redirect('home');
+    return redirect('/openorders');
 });
 
 /**
